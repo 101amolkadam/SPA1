@@ -15,7 +15,7 @@ public class NewService {
 	private EmployeeRepository employeeRepository;
 	
 	public   void saveEmployee(Employee employee) {
-        employeeRepository.save(employee);
+        	employeeRepository.save(employee);
         }
 	
 	public void deleteEmployee (Long id) {
