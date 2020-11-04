@@ -14,10 +14,9 @@ public class NewService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
-	public   void saveEmployee(Employee employee)
-    {
+	public   void saveEmployee(Employee employee) {
         employeeRepository.save(employee);
-    }
+        }
 	
 	public void deleteEmployee (Long id) {
 		employeeRepository.deleteById(id);
@@ -28,19 +27,19 @@ public class NewService {
 		Employee e = optionalEmployee.get();
 		
 		if(employee.getFirstName()!=null)
-        {
-          e.setFirstName(employee.getFirstName());
-        }
+		{
+		  e.setFirstName(employee.getFirstName());
+		}
         
 		if(employee.getLastName()!=null)
-        {
-          e.setLastName(employee.getLastName());
-        }
+		{
+		  e.setLastName(employee.getLastName());
+		}
 		
 		if(employee.getEmail_id()!=null)
-        {
-          e.setEmail_id(employee.getEmail_id());
-        }
+		{
+		  e.setEmail_id(employee.getEmail_id());
+		}
 
 		employeeRepository.save(e);
 		
